@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Preparation Portal - TCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #FF6F61 0%, #FFB86C 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 2.5rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #2c3e50;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin: 1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-bottom: 1.5rem;
+        }
+
+        .card button {
+            padding: 0.8rem 1.5rem;
+            background-color: #FFD700;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: #FF9800;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            margin-top: 3rem;
+        }
+
+        .question-container {
+            margin-top: 2rem;
+            background: #f4f4f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .question-container h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .question-container ul {
+            list-style-type: none;
+        }
+
+        .question-container li {
+            margin: 0.8rem 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Placement Preparation Portal - TCE</h1>
+    </header>
+
+    <nav>
+        <a href="#aptitude-tests">Aptitude Tests</a>
+        <a href="#company-preparation">Company Prep</a>
+        <a href="#multidisciplinary">Multidisciplinary Skills</a>
+        <a href="#resume-builder">Resume Builder</a>
+        <a href="#mock-interviews">Mock Interviews</a>
+        <a href="#moocs">MOOCs</a>
+    </nav>
+
+    <div class="container">
+        <!-- Aptitude Tests Section -->
+        <div id="aptitude-tests" class="section">
+            <h2>Aptitude and Technical Practice Tests</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><a href="https://skillrack.com/faces/index.xhtml" target="_blank">SkillRack Challenges</a></h3>
+                    <p>Practice coding challenges and technical questions tailored for placements.</p>
+                    <button><a href="https://skillrack.com/faces/index.xhtml" target="_blank" style="color: white; text-decoration: none;">Go to SkillRack</a></button>
+                </div>
+                <div class="card">
+                    <h3>Quantitative Aptitude</h3>
+                    <p>Practice tests covering arithmetic, algebra, and geometry.</p>
+                    <button onclick="showQuestions('quantitative')">Start Practice</button>
+                </div>
+                <div class="card">
+                    <h3>Logical Reasoning</h3>
+                    <p>Improve your analytical and problem-solving skills.</p>
+                    <button onclick="showQuestions('logical')">Start Practice</button>
+                </div>
+            </div>
+            <div id="questions" class="question-container">
+                <h3>Sample Questions</h3>
+                <ul id="question-list"></ul>
+            </div>
+        </div>
+
+        <!-- Company-Specific Preparation Section -->
+        <div id="company-preparation" class="section">
+            <h2>Company-Specific Preparation</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><a href="company-zoho.html">Zoho</a></h3>
+                    <p>Focus areas: Logical Thinking, Quantitative Aptitude, Python Programming.</p>
+                    <button><a href="company-zoho.html" style="color: white; text-decoration: none;">Start Preparing</a></button>
+                </div>
+                <div class="card">
+                    <h3><a href="company-tcs.html">TCS</a></h3>
+                    <p>Focus areas: Verbal Ability, Basic Programming, and Coding Challenges.</p>
+                    <button><a href="company-tcs.html" style="color: white; text-decoration: none;">Start Preparing</a></button>
+                </div>
+                <div class="card">
+                    <h3><a href="company-infosys.html">Infosys</a></h3>
+                    <p>Focus areas: Logical Reasoning, Pseudo Code, and Aptitude.</p>
+                    <button><a href="company-infosys.html" style="color: white; text-decoration: none;">Start Preparing</a></button>
+                </div>
+                <div class="card">
+                    <h3><a href="company-google.html">Google</a></h3>
+                    <p>Focus areas: Advanced Data Structures, Algorithms, and System Design.</p>
+                    <button><a href="company-google.html" style="color: white; text-decoration: none;">Start Preparing</a></button>
+                </div>
+                <div class="card">
+                    <h3><a href="company-microsoft.html">Microsoft</a></h3>
+                    <p>Focus areas: Coding, Problem Solving, and Advanced Algorithms.</p>
+                    <button><a href="company-microsoft.html" style="color: white; text-decoration: none;">Start Preparing</a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interdisciplinary Skills Section -->
+        <div id="multidisciplinary" class="section">
+            <h2>Interdisciplinary Skills</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>EMBEDDED SYSTEM</h3>
+                    <p>Learn EMBEDDED systems for a strong foundation.</p>
+                    <button>Start Learning</button>
+                </div>
+                <div class="card">
+                    <h3>Robotics</h3>
+                    <p>Understand Robotics principles for job roles involving IT infrastructure.</p>
+                    <button>Start Learning</button>
+                </div>
+                <div class="card">
+                    <h3>IoT</h3>
+                    <p>Explore IoT concepts for innovative solutions in the future of technology.</p>
+                    <button>Start Learning</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOOCs Section -->
+        <div id="moocs" class="section">
+            <h2>Massive Open Online Courses</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><a href="https://nptel.ac.in/" target="_blank">NPTEL</a></h3>
+                    <p>Access top-quality courses from IITs and IISc to enhance your skills.</p>
+                    <button><a href="https://nptel.ac.in/" target="_blank" style="color: white; text-decoration: none;">Explore NPTEL</a></button>
+                </div>
+                <div class="card">
+                    <h3><a href="https://www.tce.edu/moocs" target="_blank">TCE MOOCs</a></h3>
+                    <p>Specialized courses curated for TCE students to gain an edge in placements.</p>
+                    <button><a href="https://www.tce.edu/moocs" target="_blank" style="color: white; text-decoration: none;">Visit TCE MOOCs</a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Builder Section -->
+        <div id="resume-builder" class="section">
+            <h2>Resume Builder</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Build Your Resume</h3>
+                    <p>Create a professional resume tailored for job applications.</p>
+                    <button>Start Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mock Interview Section -->
+        <div id="mock-interviews" class="section">
+            <h2>Mock Interviews</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Technical Mock Interview</h3>
+                    <p>Get ready for your technical interviews with mock sessions.</p>
+                    <button>Start Interview</button>
+                </div>
+                <div class="card">
+                    <h3>HR Mock Interview</h3>
+                    <p>Prepare for HR interviews with customized mock sessions.</p>
+                    <button>Start Interview</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Placement Preparation Portal - TCE</p>
+    </footer>
+
+    <script>
+        function showQuestions(type) {
+            const questionContainer = document.getElementById('questions');
+            const questionList = document.getElementById('question-list');
+
+            questionContainer.style.display = 'block';
+            questionList.innerHTML = '';
+
+            if (type === 'quantitative') {
+                questionList.innerHTML = `
+                    <li>What is the area of a circle with radius 5?</li>
+                    <li>Solve: 2x + 3 = 7.</li>
+                    <li>What is the sum of angles in a triangle?</li>
+                `;
+            } else if (type === 'logical') {
+                questionList.innerHTML = `
+                    <li>Find the odd one out: 2, 3, 5, 7, 9.</li>
+                    <li>If all roses are flowers and all flowers are plants, are all roses plants?</li>
+                    <li>Which number comes next in the series: 2, 4, 8, 16, ?</li>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

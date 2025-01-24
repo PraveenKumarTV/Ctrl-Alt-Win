@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Application Development Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7fa;
+        }
+        .dark-mode {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <?php
+    $lab_name = "Mobile Application Development Studio";
+    $lab_description = "The Mobile Application Development Studio is a cutting-edge facility designed to provide students with immersive, hands-on experience in designing and developing mobile applications across various platforms.";
+    $supporting_company = "Supported by: TechCorp Solutions Pvt. Ltd.";
+    ?>
+
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <i class="fas fa-mobile-alt mr-2"></i> IT Department
+            </div>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-blue-200">Home</a>
+                <a href="#" class="hover:text-blue-200">About</a>
+                <a href="#" class="hover:text-blue-200">Projects</a>
+                <a href="#" class="hover:text-blue-200">Contact</a>
+                <button onclick="toggleDarkMode()" class="bg-blue-700 p-2 rounded">
+                    <i class="fas fa-adjust"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h1 class="text-4xl font-bold text-blue-800 mb-4">
+                    <?php echo $lab_name; ?>
+                </h1>
+                <p class="text-gray-600 mb-4"><?php echo $lab_description; ?></p>
+                <p class="text-sm text-gray-500 italic">
+                    <?php echo $supporting_company; ?>
+                </p>
+            </div>
+            <div>
+                <img src="lab-image.jpg" alt="Lab Overview" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-laptop text-blue-600 text-4xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Advanced Infrastructure</h3>
+                <p>State-of-the-art computing systems with latest mobile development tools.</p>
+            </div>
+            <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-code text-green-600 text-4xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Multi-Platform Development</h3>
+                <p>Training in iOS, Android, and cross-platform mobile application development.</p>
+            </div>
+            <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-users text-purple-600 text-4xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Expert Mentorship</h3>
+                <p>Guidance from industry professionals and experienced faculty members.</p>
+            </div>
+        </div>
+
+        <div class="mt-12">
+            <h2 class="text-3xl font-bold text-blue-800 mb-6">Our Team</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <img src="faculty1.jpg" alt="Dr. John Doe" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h4 class="font-bold">Dr. John Doe</h4>
+                    <p class="text-gray-600">Professor, Mobile Development</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <img src="faculty2.jpg" alt="Ms. Jane Smith" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h4 class="font-bold">Ms. Jane Smith</h4>
+                    <p class="text-gray-600">Assistant Professor, UI/UX Design</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center">
+                    <img src="admin.jpg" alt="Mr. Richard Roe" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h4 class="font-bold">Mr. Richard Roe</h4>
+                    <p class="text-gray-600">Lab Administrator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

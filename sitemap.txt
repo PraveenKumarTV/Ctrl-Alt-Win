@@ -1,0 +1,18 @@
+project-folder/
+│
+├── index.php               # Main PHP file
+├── style.css               # External CSS file
+Mobile/Mobile.php
+|__style.css
+├── capabilities.php        # Placeholder files for each menu item
+├── people.php
+├── research.php
+├── publications.php
+├── projects.php
+├── industry_interface.php
+├── past_events.php
+├── news.php
+├── contact.php
+├── gallery.php
+├── equipment_list.php
+└── software.php

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Connect</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            transition: background 5s ease-in-out; /* Smooth background transition */
+        }
+
+        h1, h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #56CCF2, #1E4E79); /* Gradient background */
+            padding: 20px 50px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        header .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        header nav ul {
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        header nav ul li a {
+            font-size: 1.2rem;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        header nav ul li a:hover {
+            background: #2a5298;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Alumni Page Specific Styles */
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border: 2px solid #2F80ED;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #2F80ED;
+            color: white;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background: #56CCF2;
+        }
+
+        .alumni-card {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .alumni-card p {
+            font-size: 1.3rem;
+        }
+
+        .alumni-card a {
+            display: block;
+            background-color: #2F80ED;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .alumni-card a:hover {
+            background-color: #56CCF2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Career Guidance Cell</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home.html">Career Guidance</a></li>
+                    <li><a href="yashwanth.html">Placement</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content for Alumni Connect -->
+    <main>
+        <h2>Search Alumni by Domain</h2>
+        <label for="domain-search">Search for alumni in a specific domain:</label>
+        <input type="text" id="domain-search" placeholder="e.g., Software Engineering, Marketing...">
+        <button onclick="searchAlumni()">Search</button>
+
+        <div id="alumni-list"></div>
+    </main>
+
+    <script>
+        // Example alumni data (you can replace this with a real database call)
+        const alumniData = {
+            "Software Engineering": [
+                {
+                    "name": "John Doe",
+                    "linkedin": "https://www.linkedin.com/in/johndoe",
+                    "email": "john.doe@example.com"
+                },
+                {
+                    "name": "Jane Smith",
+                    "linkedin": "https://www.linkedin.com/in/janesmith",
+                    "email": "jane.smith@example.com"
+                }
+            ],
+            "Marketing": [
+                {
+                    "name": "Alice Brown",
+                    "linkedin": "https://www.linkedin.com/in/alicebrown",
+                    "email": "alice.brown@example.com"
+                }
+            ]
+        };
+
+        // Function to search alumni based on domain input
+        function searchAlumni() {
+            const domain = document.getElementById('domain-search').value;
+            const alumniList = document.getElementById('alumni-list');
+            alumniList.innerHTML = ''; // Clear previous results
+
+            if (domain && alumniData[domain]) {
+                alumniData[domain].forEach(alumni => {
+                    const alumniCard = document.createElement('div');
+                    alumniCard.classList.add('alumni-card');
+                    alumniCard.innerHTML = `
+                        <p><strong>${alumni.name}</strong></p>
+                        <a href="${alumni.linkedin}" target="_blank">LinkedIn Profile</a>
+                        <p>Email: <a href="mailto:${alumni.email}">${alumni.email}</a></p>
+                    `;
+                    alumniList.appendChild(alumniCard);
+                });
+            } else {
+                alumniList.innerHTML = '<p>No alumni found in this domain.</p>';
+            }
+        }
+    </script>
+
+</body>
+</html>

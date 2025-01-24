@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCE Career Guidance Cell</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f7f7f7;
+            overflow-x: hidden;
+            transition: background 5s ease-in-out; /* Smooth transition for background change */
+        }
+
+        header {
+            background-color: #1d1f29; /* Dark background */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        /* Hero Section and Gradient Background */
+        .hero-section {
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            background-size: 400% 400%;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(to right, #3a539b, #2a5298); /* Initial gradient */
+            transition: background 5s ease-in-out; /* Transition for gradient */
+        }
+
+        .hero-section h2 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero-section button {
+            padding: 18px 50px;
+            background-color: #56CCF2;
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            letter-spacing: 2px;
+        }
+
+        .hero-section button:hover {
+            background-color: #2a5298;
+            transform: scale(1.1);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Services Section (Now with matching gradient background) */
+        .section {
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s;
+            background: inherit; /* Inherit the background gradient from the hero section */
+        }
+
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white; /* Ensure text is readable on the gradient background */
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 25px 60px;
+            background-color: #2a5298;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            text-align: center;
+            width: 250px;
+            margin: 20px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: #56CCF2;
+            transform: scale(1.1);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #1d1f29;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        footer a {
+            color: #56CCF2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>TCE Career Guidance Cell</h1>
+        <p>Your one-stop destination for career guidance, placement, and entrance exam preparation at TCE.</p>
+    </header>
+
+    <!-- Hero Section with Animated Gradient Background -->
+    <section class="hero-section" id="heroSection">
+        <h2>Begin Your Journey at TCE</h2>
+        <p>Explore expert guidance and resources for Alumni Connect and Placement Preparation at TCE.</p>
+        <button id="startBtn">Discover More</button>
+    </section>
+
+    <!-- Main Buttons Section (Alumni Connect and Placement Preparation) -->
+    <section class="section" id="servicesSection">
+        <h2>Explore Our Key Services</h2>
+        <div class="buttons">
+            <a href="index.html" class="button">Alumni Connect</a>
+            <a href="yashwanth.html" class="button">Placement Preparation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>TCE Career Guidance Cell &copy; 2025 | <a href="about.html">About Us</a></p>
+    </footer>
+
+    <script>
+        // JavaScript for showing the section on button click and scroll effect
+        document.getElementById('startBtn').addEventListener('click', function() {
+            // Change the background of the entire page and hero section when the button is clicked
+            document.querySelector('#heroSection').style.background = 'linear-gradient(to right, #56CCF2, #1E4E79)'; // New gradient
+            document.body.style.background = 'linear-gradient(to right, #56CCF2, #1E4E79)'; // Apply gradient to entire body
+
+            // Scroll to the next section (smooth scroll to 'servicesSection')
+            document.querySelector('#servicesSection').scrollIntoView({
+                behavior: 'smooth'
+            });
+
+            // Show the buttons section with animation
+            setTimeout(function() {
+                document.getElementById('servicesSection').classList.add('active');
+            }, 500); // Delay for smooth transition
+        });
+    </script>
+
+</body>
+</html>

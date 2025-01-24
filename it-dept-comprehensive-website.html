@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College IT Department - Comprehensive Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7fa;
+        }
+        .section-header {
+            border-bottom: 2px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <i class="fas fa-laptop-code mr-2"></i> IT Department
+            </div>
+            <div class="space-x-4">
+                <a href="#home" class="hover:text-blue-200">Home</a>
+                <a href="#equipment" class="hover:text-blue-200">Equipment</a>
+                <a href="#software" class="hover:text-blue-200">Software</a>
+                <a href="#capabilities" class="hover:text-blue-200">Capabilities</a>
+                <a href="#people" class="hover:text-blue-200">People</a>
+                <a href="#research" class="hover:text-blue-200">Research</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard/Home Section -->
+    <section id="home" class="container mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4">Total Research Projects</h3>
+                <div class="text-4xl font-bold text-blue-600">24</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4">Publications This Year</h3>
+                <div class="text-4xl font-bold text-green-600">42</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-4">Active PhD Scholars</h3>
+                <div class="text-4xl font-bold text-purple-600">18</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment List Section -->
+    <section id="equipment" class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-6 section-header pb-2">Laboratory Equipment</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-server text-blue-600 text-4xl mb-4"></i>
+                <h3 class="font-bold mb-2">High-Performance Servers</h3>
+                <ul class="list-disc pl-5">
+                    <li>Dell PowerEdge R740</li>
+                    <li>HP ProLiant DL380</li>
+                    <li>Lenovo ThinkSystem SR650</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-desktop text-green-600 text-4xl mb-4"></i>
+                <h3 class="font-bold mb-2">Workstations</h3>
+                <ul class="list-disc pl-5">
+                    <li>Apple Mac Pro</li>
+                    <li>Custom-built Research Workstations</li>
+                    <li>GPU-Enabled Computation Systems</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-microchip text-purple-600 text-4xl mb-4"></i>
+                <h3 class="font-bold mb-2">Specialized Equipment</h3>
+                <ul class="list-disc pl-5">
+                    <li>Network Analyzers</li>
+                    <li>Cloud Simulation Platforms</li>
+                    <li>IoT Development Kits</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Section -->
+    <section id="software" class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-6 section-header pb-2">Software Ecosystem</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="font-bold mb-4">Development Tools</h3>
+                <ul class="list-disc pl-5">
+                    <li>Visual Studio Code</li>
+                    <li>IntelliJ IDEA</li>
+                    <li>Eclipse</li>
+                    <li>PyCharm</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="font-bold mb-4">Cloud Platforms</h3>
+                <ul class="list-disc pl-5">
+                    <li>AWS Academy</li>
+                    <li>Microsoft Azure</li>
+                    <li>Google Cloud Platform</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="font-bold mb-4">Research Software</h3>
+                <ul class="list-disc pl-5">
+                    <li>MATLAB</li>
+                    <li>R Studio</li>
+                    <li>Jupyter Notebooks</li>
+                    <li>SAS</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- People Section -->
+    <section id="people" class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-6 section-header pb-2">Department Personnel</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg text-center">
+                <img src="faculty1.jpg" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h4 class="font-bold">Dr. Rajesh Kumar</h4>
+                <p class="text-gray-600">Department Head</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg text-center">
+                <img src="faculty2.jpg" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h4 class="font-bold">Prof. Anita Sharma</h4>
+                <p class="text-gray-600">Research Coordinator</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg text-center">
+                <img src="admin.jpg" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h4 class="font-bold">Mr. Vikram Patel</h4>
+                <p class="text-gray-600">Lab Administrator</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold mb-6 section-header pb-2">Research Highlights</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg">
+                <h3 class="font-bold text-xl mb-4">Current Research Areas</h3>
+                <ul class="list-disc pl-5">
+                    <li>Artificial Intelligence</li>
+                    <li>Cloud Computing</li>
+                    <li>Internet of Things</li>
+                    <li>Cybersecurity</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg">
+                <h3 class="font-bold text-xl mb-4">Recent Publications</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <strong>Machine Learning Journal</strong>
+                        <p class="text-sm text-gray-600">Advanced Neural Network Architectures</p>
+                    </li>
+                    <li>
+                        <strong>IEEE Transactions</strong>
+                        <p class="text-sm text-gray-600">IoT Security Protocols</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Contact Information -->
+    <footer class="bg-blue-800 text-white py-8">
+        <div class="container mx-auto px-4 grid md:grid-cols-3 gap-6">
+            <div>
+                <h4 class="font-bold mb-4">Contact Us</h4>
+                <p>Email: it.department@college.edu</p>
+                <p>Phone: +91-XXX-XXX-XXXX</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Location</h4>
+                <p>IT Department Building</p>
+                <p>College Campus, City, State</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-blue-200">Gallery</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Past Events</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Industry Interface</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
